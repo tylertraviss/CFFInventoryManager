@@ -8,7 +8,13 @@ public class InventoryManager {
     // Collecting All Students
     List<Student> students = new ArrayList<>();
     List<Supply> suppliesNeeded = new ArrayList<>();
-    HashMap<String, Integer> requiredSupplies = new HashMap<>();
+
+    HashMap<String, Integer> NEED = new HashMap<>();
+    HashMap<String, Integer> HAVE = new HashMap<>();
+    HashMap<String, Integer> BUY = new HashMap<>();
+
+
+
 
     public InventoryManager(){
         return;
@@ -65,7 +71,7 @@ public class InventoryManager {
             }
         }
 
-        requiredSupplies = totals;
+        NEED = totals;
 
     }
 
@@ -85,8 +91,8 @@ public class InventoryManager {
         // Print All Supplies Required
 
         System.out.println("Required Items \n");
-        for (String key : requiredSupplies.keySet()) {
-            System.out.println(key + " -> " + requiredSupplies.get(key));
+        for (String key : NEED.keySet()) {
+            System.out.println(key + " -> " + NEED.get(key));
         }
         System.out.println("\n");
 
