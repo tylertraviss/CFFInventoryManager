@@ -9,5 +9,8 @@
         <module name="cff-inventory-manager" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CFFInventoryManager" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
